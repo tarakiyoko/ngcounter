@@ -1,0 +1,12 @@
+<div class="list-container"> 
+  <h1>Counter List</h1>
+  <button (click)="createCounter()">Create Counter</button>
+  <super-counter
+    *ngFor="let counter of superCounters"
+    [super]="counter.super"
+  ></super-counter>
+  <counter-detail
+    *ngFor="let counter of counters"
+    [counter]="counter.counter"
+  ></counter-detail>  
+</div>
