@@ -3,10 +3,10 @@
   <button (click)="createCounter()">Create Counter</button>
   <super-counter
     *ngFor="let counter of superCounters"
-    [super]="counter.super"
+    [super]="counter"
   ></super-counter>
   <counter-detail
     *ngFor="let counter of counters"
-    [counter]="counter.counter"
+    [detailCounter]="counter"
   ></counter-detail>  
 </div>

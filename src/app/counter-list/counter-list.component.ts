@@ -20,7 +20,7 @@ export class CounterListComponent implements OnInit {
     if (this.counters.length !== 0 && this.counters.length % 6 == 0) {
       const agg = this.counters.reduce((acc,val) => {
         console.log(val);
-        return acc += val['counter'];
+        return acc += val['detailCounter'];
       },0);
       console.log(agg);
       // TODO: will need to create super counter.
@@ -28,7 +28,7 @@ export class CounterListComponent implements OnInit {
       this.counters = [];      
     } else {
       let obj = {
-        counter: 0
+        detailCounter: 0
       }
       this.counters.push(obj);
     }

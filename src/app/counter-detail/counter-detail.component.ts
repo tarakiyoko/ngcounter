@@ -6,18 +6,18 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./counter-detail.component.css']
 })
 export class CounterDetailComponent implements OnInit {
-  @Input() counter: number;
+  @Input() detailCounter: object;
 
   constructor() { 
-    this.counter = 0;
+    this.detailCounter = {};
   }
 
   ngOnInit() {
   }
 
   increment(num:number) {
-    this.counter += num;
-    if(this.counter < 0) {
-      this.counter=0;}
+    this.detailCounter['detailCounter'] += num;
+    if(this.detailCounter['detailCounter'] < 0) {
+      this.detailCounter['detailCounter']=0;}
   }
 }
