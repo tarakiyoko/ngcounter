@@ -1,5 +1,9 @@
-<div>
-    <p>{{ super }}</p>
-    <button (click)="increment(1)">+</button>
-    <button (click)="increment(-1)">-</button>
+<div *ngIf="super.level === 1">
+  <p>{{ super.super }}</p>
+  <button (click)="increment(3)">+</button>
+  <button (click)="increment(-3)">-</button>
+</div>
+<div *ngIf="super.level === 2">
+    <p>{{ super.super }}</p>
+    <button (click) = "startIncrement()">Start (Super Level 2)</button>
   </div>
